@@ -1,5 +1,5 @@
 # Description:
-#   A start on some basic MoCA customisation 
+#   A start on some basic MoCA customisation
 #
 # Notes:
 #   they are pretty basic at the moment, please improve by reading the scripting documentation at:
@@ -20,3 +20,6 @@ module.exports = (robot) ->
 
    robot.hear /journal club/i, (res) ->
      res.send "I want pizza"
+
+   robot.hear /email/i, (res) ->
+     res.send "We don't use email anymore!"
