@@ -12,5 +12,6 @@
   "hubot-rules",
   "hubot-timezoneio",
   "hubot-shipit",
-  "hubot-darts"
+  "hubot-darts",
+  "hubot-fliptable"
 ]
