@@ -15,9 +15,6 @@ module.exports = (robot) ->
    robot.hear /coffee time/i, (res) ->
      res.send res.random coffeeReplies
 
-   robot.hear /journal club/i, (res) ->
-     res.send "I want pizza"
-
    robot.hear /pizza/i, (res) ->
      res.send "Did somebody mention pizza?"
 
