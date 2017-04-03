@@ -11,4 +11,4 @@ module.exports = (robot) ->
             # and makes an http get call
             .get() (error, response, body) ->
                 # passes back the complete reponse
-                msg.send body
+                msg.send body['thought']
