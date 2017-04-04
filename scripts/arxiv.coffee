@@ -27,5 +27,5 @@ module.exports = (robot) ->
                     text.push description
                     gotNone = false
             if gotNone
-                text.push "Nothing found :'("
+                text.push "Nothing found :disappointed:"
             msg.send text.join('\n')
