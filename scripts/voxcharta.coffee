@@ -4,7 +4,7 @@
 cheerio = require('cheerio')
 
 module.exports = (robot) ->
-    robot.listen /voxcharta/i, (msg) ->
+    robot.respond /voxcharta/i, (msg) ->
         msg.http('http://moca.voxcharta.org').get() (error, response, body) ->
             # Load page
             page = cheerio.load(body)
