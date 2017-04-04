@@ -4,14 +4,14 @@
 cheerio = require('cheerio')
 
 module.exports = (robot) ->
-    robot.hear /voxcharta/i, (msg) ->
+    robot.listen /voxcharta/i, (msg) ->
         msg.http('http://moca.voxcharta.org').get() (error, response, body) ->
             # Load page
             page = cheerio.load(body)
             # Get papers on the agenda
             papers = page('.votemicrotext')
             text = []
-            text.push '*Papers on the Journal Club agenda this week:*'
+            text.push '*Papers on the discussion agenda this week:*'
             text.push ''
             # Iterate over papers
             papers.each (elem) ->
@@ -19,7 +19,9 @@ module.exports = (robot) ->
                 title = page(this).children().first().text()
                 link = page(this).children().first().attr('href')
                 text.push '-- ' + title
-                text.push '   ' + link
+                text.push link
                 text.push ''
-            text.push 'Vote for a paper here: http://moca.voxcharta.org'
+            details = page('.disc-details p')
+            details.each (elem) ->
+                text.push page(this).text()
             msg.send text.join('\n')
