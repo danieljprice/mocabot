@@ -9,6 +9,7 @@ module.exports = (robot) ->
         url = 'http://export.arxiv.org/rss/astro-ph'
         parser url, (err,rss)->
             text = []
+            text.push err
             text.push "Today's astro-ph postings for: " + keyWords.join(', ')
             text.push ""
             gotNone = true
