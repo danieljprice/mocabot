@@ -11,7 +11,7 @@ module.exports = (robot) ->
         keyWords = msg.match[1].split(' ')
         text.push "Today's astro-ph postings for: " + keyWords.join(', ')
         text.push ""
-        msg.http('https://arxiv.org/list/astro-ph/new').get() (error, response, body) ->
+        msg.http('http://lanl.arxiv.org/list/astro-ph/new').get() (error, response, body) ->
             # Load page
             page = cheerio.load(body)
             # Ignore children function
@@ -23,7 +23,7 @@ module.exports = (robot) ->
             papers.each (elem) ->
                 # Scrape text
                 listing     = page(this).parent()
-                url         = 'https://arxiv.org' + listing.children('span.list-identifier').children('a').first().attr('href')
+                url         = 'http://lanl.arxiv.org' + listing.children('span.list-identifier').children('a').first().attr('href')
                 title       = listing.next().children('div.meta').children('div.list-title').ignore('span').text()
                 authors     = listing.next().children('div.meta').children('div.list-authors').ignore('span').text()
                 abstract    = listing.next().children('div.meta').children('p').text()
