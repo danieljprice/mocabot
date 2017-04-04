@@ -23,7 +23,8 @@
     "hubot-slack": "^4.3.3",
     "hubot-timezoneio": "0.0.1",
     "hubot-fliptable": ">= 0.0.0",
-    "cheerio": ">= 0.0.0"
+    "cheerio": ">= 0.0.0",
+    "parse-rss": "*"
   },
   "engines": {
     "node": "0.10.x"
