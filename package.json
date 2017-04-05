@@ -27,6 +27,6 @@
     "parse-rss": "*"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "5.10.x"
   }
 }
