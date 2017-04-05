@@ -25,6 +25,7 @@ module.exports = (robot) ->
                     text.push '*' + title + '*'
                     text.push link
                     text.push description
+                    text.push ''
                     gotNone = false
             if gotNone
                 text.push "Nothing found :disappointed:"
