@@ -24,7 +24,7 @@ module.exports = (robot) ->
                 if keyWords.every(inText)
                     text.push '*' + title + '*'
                     text.push link
-                    text.push description
+                    # text.push description
                     text.push ''
                     gotNone = false
             if gotNone
