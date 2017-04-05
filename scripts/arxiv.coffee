@@ -6,6 +6,8 @@ parser = require('parse-rss')
 module.exports = (robot) ->
     robot.respond /arxiv (.*)/i, (msg) ->
         keyWords = msg.match[1].split(' ')
+        showAbstract = 'showabstract' in keyWords
+        keyWords = (x for x in keyWords when x != 'showabstract')
         url = 'http://export.arxiv.org/rss/astro-ph'
         parser url, (err,rss)->
             text = []
@@ -24,7 +26,8 @@ module.exports = (robot) ->
                 if keyWords.every(inText)
                     text.push '*' + title + '*'
                     text.push link
-                    # text.push description
+                    if showAbstract
+                        text.push description
                     text.push ''
                     gotNone = false
             if gotNone
