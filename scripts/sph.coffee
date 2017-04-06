@@ -158,7 +158,7 @@ root.leapfrog = (x, h, v, rho, u, p, m, tfin, npart) ->
 
 
 module.exports = (robot) ->
-    robot.hear /sph\s?(.*)?/i, (res) ->
+    robot.respond /sph\s?(.*)?/i, (res) ->
         input = Number(res.match[1])
         if isNaN(input)
             res.send "I can solve the shock tube problem using SPH!\nWhat time do you want to integrate to?\nE.g. @mocabot sph 0.2"
