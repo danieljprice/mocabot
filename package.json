@@ -5,10 +5,12 @@
   "author": "Daniel Price <daniel.price@monash.edu>",
   "description": "Monash Centre for Astrophysics Hubot",
   "dependencies": {
+    "cheerio": ">= 0.0.0",
     "hubot": "^2.19.0",
     "hubot-calculator": "^0.4.0",
     "hubot-darts": "^1.0.4",
     "hubot-diagnostics": "0.0.1",
+    "hubot-fliptable": ">= 0.0.0",
     "hubot-google-images": "^0.2.6",
     "hubot-google-translate": "^0.2.0",
     "hubot-help": "^0.2.0",
@@ -22,8 +24,7 @@
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^4.3.3",
     "hubot-timezoneio": "0.0.1",
-    "hubot-fliptable": ">= 0.0.0",
-    "cheerio": ">= 0.0.0",
+    "hubot-tomato-timer": "^1.1.1",
     "parse-rss": "*"
   },
   "engines": {
