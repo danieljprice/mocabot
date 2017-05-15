@@ -23,3 +23,6 @@ module.exports = (robot) ->
 
    robot.hear /email/i, (res) ->
      res.send "We don't use email anymore!"
+
+   robot.hear /There are no events today/i, (res) ->
+     res.send "SAD"
