@@ -16,6 +16,7 @@
     "hubot-help": "^0.2.0",
     "hubot-heroku-keepalive": "^1.0.2",
     "hubot-maps": "0.0.2",
+    "hubot-plusplus": "^1.4.0",
     "hubot-pugme": "^0.1.0",
     "hubot-reaction": "0.0.6",
     "hubot-redis-brain": "0.0.3",
@@ -23,6 +24,7 @@
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^4.3.3",
+    "hubot-thank-you": "0.0.3",
     "hubot-timezoneio": "0.0.1",
     "hubot-tomato-timer": "^1.1.1",
     "parse-rss": "*"
