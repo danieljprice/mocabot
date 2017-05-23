@@ -7,8 +7,8 @@
 
 module.exports = (robot) ->
 
-   robot.hear /astro/i, (res) ->
-     res.send "We love Astronomy!"
+   # robot.hear /astro/i, (res) ->
+   #   res.send "We love Astronomy!"
 
    coffeeReplies = ['I feel the need for caffeine...', 'I love the smell of caffeine in the morning', 'Count me in', 'Caffeine me up!', 'Can we have tea?', 'I have been waiting all morning for this']
 
@@ -18,11 +18,11 @@ module.exports = (robot) ->
    robot.hear /pizza/i, (res) ->
      res.send "Did somebody mention pizza?"
 
-   robot.hear /seminar/i, (res) ->
-     res.send "Did somebody mention free lunch?"
+   # robot.hear /seminar/i, (res) ->
+   #   res.send "Did somebody mention free lunch?"
 
-   robot.hear /email/i, (res) ->
-     res.send "We don't use email anymore!"
+   # robot.hear /email/i, (res) ->
+   #   res.send "We don't use email anymore!"
 
-   robot.hear /There are no events today/i, (res) ->
-     res.send "SAD"
+   # robot.hear /There are no events today/i, (res) ->
+   #   res.send "SAD"
